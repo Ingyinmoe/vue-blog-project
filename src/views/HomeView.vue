@@ -1,18 +1,31 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+     <div>
+       <PostView></PostView>
+     </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
+
+
+import PopularTag from '../components/PopularTag'
+import PostView from '../components/PostView'
 export default {
-  name: 'HomeView',
   components: {
-    HelloWorld
-  }
+    PopularTag, PostView },
 }
+
 </script>
+
+<style>
+.layout{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+}
+.padd-20{
+  padding: 20px;
+}
+</style>
